@@ -8,6 +8,7 @@ app = FastAPI()
 
 @app.get("/validate/{postcode}")
 async def validate_postcode(postcode: str):
+    postcode = postcode.upper()
     if re.match(VALIDATION_REGEX, postcode):
         return {"message": "Postcode OK"}
     else:

@@ -19,7 +19,7 @@ class TestPostcodes(unittest.TestCase):
         assert response.status_code == 200
         assert response.json()['message'] == "Postcode OK"
 
-    def test_valid_nospacebetween(self):
+    def test_invalid_nospacebetween(self):
         postcode = 'ne226ex'
         response = client.get(f"/validate/{postcode}")
         assert response.status_code == 200
