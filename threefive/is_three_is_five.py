@@ -1,13 +1,16 @@
-def is_three_is_five(num: int) -> [int, str]:
-    num_dict = {3: 'three', 5: 'five'}
-    string = ""
+from typing import Union
+
+
+def is_three_is_five(num: int) -> Union[int, str]:
+    num_dict = {3: "three", 5: "five"}
+    response_string = ""
     for key in num_dict:
         if num % key == 0:
-            string += num_dict[key]
-    if string == "":
+            response_string += num_dict[key]
+    if response_string == "":
         return num
     else:
-        return string
+        return response_string
 
 
 def main():
@@ -15,5 +18,5 @@ def main():
         print(is_three_is_five(num))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

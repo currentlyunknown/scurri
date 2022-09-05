@@ -1,6 +1,5 @@
 import re
 from fastapi import FastAPI
-
 from constants import VALIDATION_REGEX
 
 app = FastAPI()
